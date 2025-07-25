@@ -1,0 +1,33 @@
+version: 2
+
+project_name: reia-dev-helper
+
+builds:
+  - id: main
+    main: ./cmd/main.go
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags: "-s -w"
+    binary: reia-dev-helper
+
+archives:
+  - id: default
+    format: zip
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - LICENSE
+      - README.md
+    wrap_in_directory: true
+
+release:
+  github:
+    owner: Quaint-Studios
+    name: reia-dev-helper
+
+checksum:
+  name_template: 'checksums.txt'
