@@ -5,8 +5,8 @@ This will help you with setting up all of the requirements to develop Reia.
 ## Required software this will help you install
 
 - Git and Git LFS
-- Godot (optional CLI)
 - Rust (required)
+- Godot (optional CLI)
 - Zig (optional)
 - Docker (optional)
 
